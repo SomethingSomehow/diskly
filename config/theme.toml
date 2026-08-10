@@ -14,6 +14,6 @@ filled_bar = { bg = [190, 190, 190] }
 empty_bar = { bg = [100, 100, 100] }
 scroll_track = { bg = [200, 200, 200] }
 logo_from = { fg = [112, 162, 255] }
-logo_to = { fg = [70, 130, 255] }
+logo_to = { fg = [0, 64, 200] }
 version = { fg = [255, 255, 255], modifiers = ["italic"] }
 dim = { fg = [100, 100, 100] }
