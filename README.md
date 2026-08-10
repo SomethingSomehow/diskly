@@ -2,21 +2,15 @@
 
 ## Description
 
----
-
 A disk usage analyzer with directory tree and pie chart visualizations, with safe deletion via the bin.
 
 Visual design inspired by [btop](https://github.com/aristocratos/btop).
 
 ## Demo
 
----
-
 ![demo](assets/demo.gif)
 
 ## Features
-
----
 
 - **Fast** — parallel dir scanning via [jwalk](https://github.com/Byron/jwalk)
 - **Efficient** — event-driven rendering, low memory footprint
@@ -28,8 +22,6 @@ Visual design inspired by [btop](https://github.com/aristocratos/btop).
 - And more...
 
 ## Roadmap
-
----
 
 Diskly is under active development. Some of the planned features include:
 
@@ -43,13 +35,9 @@ Diskly is under active development. Some of the planned features include:
 
 ## Installation
 
----
-
 Download [latest release](https://github.com/SomethingSomehow/diskly/releases/latest) for your platform and run it.
 
 ## Usage
-
----
 
 ```bash
 diskly        # scan current dir
