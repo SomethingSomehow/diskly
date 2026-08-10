@@ -1,0 +1,19 @@
+background = { bg = [30, 31, 34] }
+tree_border = { fg = [254, 40, 100] }
+pie_border = { fg = [50, 200, 100] }
+bin_border = { fg = [255, 140, 0] }
+overlay_border = { fg = [70, 130, 255] }
+hint = { fg = [220, 30, 40] }
+inactive_hint = { fg = [110, 15, 20] }
+title = { fg = [255, 255, 255] }
+inactive_title = { fg = [128, 128, 128] }
+text = { fg = [187, 187, 187] }
+inactive_text = { fg = [94, 94, 94] }
+row_highlight = { bg = [45, 46, 49] }
+filled_bar = { bg = [190, 190, 190] }
+empty_bar = { bg = [100, 100, 100] }
+scroll_track = { bg = [200, 200, 200] }
+logo_from = { fg = [112, 162, 255] }
+logo_to = { fg = [70, 130, 255] }
+version = { fg = [255, 255, 255], modifiers = ["italic"] }
+dim = { fg = [100, 100, 100] }
