@@ -3,6 +3,7 @@ name = "diskly"
 version = "0.1.0"
 edition = "2024"
 description = "A fast TUI disk usage analyzer"
+repository = "https://github.com/SomethingSomehow/diskly"
 
 [dependencies]
 ansi_colours = "1.2.3"
@@ -31,3 +32,6 @@ tempfile = "3.27.0"
 lto = "fat"
 codegen-units = 1
 strip = true
+
+[profile.dist]
+inherits = "release"
