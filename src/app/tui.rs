@@ -329,10 +329,9 @@ fn render_alert(frame: &mut Frame, state: &State, area: Rect, kind: &AlertKind) 
     const ALERT_WIDTH: u16 = 50;
 
     let msg = match kind {
-        AlertKind::IncompleteClear => Line::styled(
-            "Some entries could not be deleted",
-            state.config.theme.text,
-        ),
+        AlertKind::IncompleteClear => {
+            Line::styled("Some entries could not be deleted", state.config.theme.text)
+        }
     };
 
     let buttons = Line::from(vec![
