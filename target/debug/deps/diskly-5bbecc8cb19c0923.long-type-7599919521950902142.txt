@@ -1,1 +1,0 @@
-std::iter::Map<std::slice::Iter<'_, tui::state::BinEntry>, {closure@src/tui/app.rs:135:90: 135:93}>
