@@ -35,7 +35,7 @@ Diskly is under active development. Some of the planned features include:
 
 ## Installation
 
-Download [latest release](https://github.com/SomethingSomehow/diskly/releases/latest) for your platform and run it.
+Download [latest release](https://github.com/SomethingSomehow/diskly/releases/latest) archive for your platform, extract it, and run diskly.
 
 ## Usage
 
