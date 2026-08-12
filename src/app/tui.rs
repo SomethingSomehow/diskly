@@ -332,6 +332,7 @@ fn render_alert(frame: &mut Frame, state: &State, area: Rect, kind: &AlertKind) 
         AlertKind::IncompleteClear => {
             Line::styled("Some entries could not be deleted", state.config.theme.text)
         }
+        AlertKind::ClearEmptyBin => Line::styled("Nothing to clear", state.config.theme.text),
     };
 
     let buttons = Line::from(vec![

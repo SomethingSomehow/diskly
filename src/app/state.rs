@@ -109,6 +109,14 @@ impl State {
         self.bin.restore_by_path(&entry_path)
     }
 
+    pub fn confirm_clear(&mut self) {
+        if self.bin.rows().is_empty() {
+            self.overlay = Overlay::Alert(AlertKind::ClearEmptyBin);
+        } else {
+            self.overlay = Overlay::Confirm(ConfirmKind::Clear)
+        }
+    }
+
     pub fn clear_bin(&mut self) {
         let cleared = self.bin.clear();
 
@@ -200,6 +208,7 @@ pub enum ConfirmKind {
 #[derive(Debug, Eq, PartialEq)]
 pub enum AlertKind {
     IncompleteClear,
+    ClearEmptyBin,
 }
 
 #[cfg(test)]
@@ -342,6 +351,18 @@ mod tests {
         state.restore_selected_tree();
 
         assert_eq!(state.bin.rows().len(), expected);
+    }
+
+    #[rstest]
+    #[case(vec![], Overlay::Alert(AlertKind::ClearEmptyBin))]
+    #[case(vec![BinEntry::default()], Overlay::Confirm(ConfirmKind::Clear))]
+    fn confirm_clear(#[case] bin_rows: Vec<BinEntry>, #[case] expected: Overlay) {
+        let mut state = state(PathBuf::from("/"));
+        state.bin.push_entries(bin_rows);
+
+        state.confirm_clear();
+
+        assert_eq!(state.overlay, expected);
     }
 
     #[test]

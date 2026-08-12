@@ -1,4 +1,4 @@
-use crate::app::state::{AlertKind, Component, ConfirmKind, Overlay, State};
+use crate::app::state::{Component, ConfirmKind, Overlay, State};
 use crossterm::event::Event as CrosstermEvent;
 use crossterm::event::Event::{Key, Mouse};
 use crossterm::event::{
@@ -62,7 +62,7 @@ impl Command {
                     _ => Self::Nothing,
                 };
             }
-            Overlay::Alert(AlertKind::IncompleteClear) => {
+            Overlay::Alert(_) => {
                 return match event.code {
                     KeyCode::Enter | KeyCode::Esc => Self::HideOverlay,
                     _ => Self::Nothing,

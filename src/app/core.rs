@@ -1,5 +1,5 @@
 use crate::app::command::{BinCommand, Command, TreeCommand};
-use crate::app::state::{ConfirmKind, Overlay, State};
+use crate::app::state::{Overlay, State};
 use crate::app::tui::render;
 use crate::config::Config;
 use crate::fs::scanner::FsScanner;
@@ -122,7 +122,7 @@ impl App {
                 state.bin.select_row(Some(idx));
             }
             BinCommand::Restore => state.bin.restore_selected(),
-            BinCommand::Clear => state.overlay = Overlay::Confirm(ConfirmKind::Clear),
+            BinCommand::Clear => state.confirm_clear(),
             BinCommand::ClearConfirmed => state.clear_bin(),
         }
     }
